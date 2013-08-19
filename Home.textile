@@ -1,4 +1,3 @@
-
 h1. Automatic PWA Approximation Toolbox
 
 *Warning:* the code is experimental and subject to frequent changes.
@@ -12,7 +11,7 @@ h2. Prerequisites
 
 h2. Download
 
-The @autoprox@ package is available in the "download section":http://kirp.chtf.stuba.sk/sw/redmine/projects/autoprox/files
+The @autoprox@ package is available in the Downloads section.
 
 h2. Bug reports and inquiries
 
@@ -49,7 +48,7 @@ x = linspace(-1, 1, 100);
 plot(x, x.^3, x, f_aprx(x), 'r--');
 </pre>
 
-!http://kirp.chtf.stuba.sk/sw/redmine/attachments/28/x3.png!
+!http://kirphome1.chtf.stuba.sk:8003/attachments/28/x3.png( )!
 
 
 h3. Approximation of the product of two functions of one variable
