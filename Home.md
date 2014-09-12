@@ -11,23 +11,23 @@
 
 ## Download ##
 
-The @autoprox@ package is available in the [Downloads](Downloads) section.
+The `autoprox` package is available in the [Downloads](Downloads) section.
 
 ## Bug reports and inquiries ##
 
-Send your comments, questions, and/or bug reports to @michal.kvasnica(at)stuba.sk@
+Send your comments, questions, and/or bug reports to `michal.kvasnica(at)stuba.sk`
 
 ## Quick start ##
 
 Download the ZIP package, unpack, and run one of the following demos:
 
-* @demo_1d@
-* @demo_2d@
-* @demo_nd@
-* @demo_nd_sum@
-* @demo_deq@
+* `demo_1d`
+* `demo_2d`
+* `demo_nd`
+* `demo_nd_sum`
+* `demo_deq`
 
-or perform the approximations by the graphical user interface, which can be launched by the following command: @autoprox_gui@
+or perform the approximations by the graphical user interface, which can be launched by the following command: `autoprox_gui`
 
 ## Usage - command line interface ##
 
