@@ -1,39 +1,39 @@
-h1. Automatic PWA Approximation Toolbox
+# Automatic PWA Approximation Toolbox #
 
 *Warning:* the code is experimental and subject to frequent changes.
 
-h2. Prerequisites
+## Prerequisites ##
 
 * MATLAB
 * Symbolic toolbox
 * Optimization toolbox
-* "HYSDEL":http://control.ee.ethz.ch/~hybrid/hysdel/hysdel.php
+* [HYSDEL](http://control.ee.ethz.ch/~hybrid/hysdel/hysdel.php)
 
-h2. Download
+## Download ##
 
-The @autoprox@ package is available in the Downloads section.
+The @autoprox@ package is available in the [Downloads](Downloads) section.
 
-h2. Bug reports and inquiries
+## Bug reports and inquiries ##
 
-Send your comments, questions, and/or bug reports to @michal.kvasnica@stuba.sk@
+Send your comments, questions, and/or bug reports to @michal.kvasnica(at)stuba.sk@
 
-h2. Quick start
+## Quick start ##
 
 Download the ZIP package, unpack, and run one of the following demos:
 
-* demo_1d
-* demo_2d
-* demo_nd
-* demo_nd_sum
-* demo_deq
+* @demo_1d@
+* @demo_2d@
+* @demo_nd@
+* @demo_nd_sum@
+* @demo_deq@
 
 or perform the approximations by the graphical user interface, which can be launched by the following command: @autoprox_gui@
 
-h2. Usage - command line interface
+## Usage - command line interface ##
 
-h3. Approximation of functions of one variable
+### Approximation of functions of one variable ###
 
-<pre>
+```matlab
 syms x
 f = x^3;
 f_bounds = [-1, 1];
@@ -46,14 +46,11 @@ hysdel_1d(f_aprx_data, 'f_aprx.hys');
 % plot the original function and its approximation
 x = linspace(-1, 1, 100);
 plot(x, x.^3, x, f_aprx(x), 'r--');
-</pre>
+```
 
-!http://kirphome1.chtf.stuba.sk:8003/attachments/28/x3.png( )!
+### Approximation of the product of two functions of one variable ###
 
-
-h3. Approximation of the product of two functions of one variable
-
-<pre>
+```matlab
 % approximate x1^3 * (abs(x2) + 0.5*x2^2 - sin(x2^3))
 
 syms x1 x2
@@ -90,12 +87,11 @@ subplot(1, 2, 2);
 surf(x1, x2, f_aprx(x1, x2));
 axis tight
 title('Approximation.');
-</pre>
-!http://kirp.chtf.stuba.sk/sw/redmine/attachments/12/f1f2s.png!
+```
 
-h3. Approximation of general N-D functions
+### Approximation of general N-D functions ###
 
-<pre>
+```matlab
 clear
 syms z1 z2 z3 z4 z5 z6 
 
@@ -135,11 +131,11 @@ hysdel('FNsum_approx.hys', 'FNsum_approx_sim.m');
 z_data = [1; 0.1; 2; 0; 0; 0];
 [x,d,z,y] = FNsum_approx_sim([], z_data);
 y
-</pre>
+```
 
-h3. Approximation of a nonlinear vector field f(x,u)
+### Approximation of a nonlinear vector field f(x,u) ###
 
-<pre>
+```matlab
 % symbolic variables representing the state and input variables
 syms ca v vc qc
 
@@ -195,12 +191,11 @@ hysdel('diffeq_approx.hys', 'diffeq_approx_sim.m','-5');
 x_data = [1;0.1;2];
 u_data = [2];
 [x,d,z,y] = diffeq_approx_sim(x_data,u_data);
+```
 
-</pre>
+## Usage - graphical user interface ##
 
-h2. Usage - graphical user interface
-
-h3. Brief description
+### Brief description ###
 
 The basic window consists of five sections each serving for different tasks:
 
@@ -209,21 +204,3 @@ The basic window consists of five sections each serving for different tasks:
 * *Generate PWA approximation* - to render the approximation or to split the the original function, if approximation of an n-dimensional functions has to be realized
 * *Approximation summary* - comprehensive description about the efficiency of the linearization, including several indicators of quality(average error, worst case error ...)
 * *Post-processing* - serving for exporting the acquired data to teh HYSDEL language
-
-|!http://kirp.chtf.stuba.sk/sw/redmine/attachments/23/basic_window.png!|
-
-h3. Approximation of a uni-variate function
-
-1. Denote the radio button, corresponding to 1D approximation. Then define required data in the Setup section, listed in the above mentioned section.
-   Finally, render the original function and choose the number of approximation segments. The result will be the graph of the original nonlinear function
-   visualized on the right. The visualization can be achieved by the *_Plotting the original function_* button, shown on the basic window image. 
-
-|!http://kirp.chtf.stuba.sk/sw/redmine/attachments/27/aprx_1D.png!|!http://kirp.chtf.stuba.sk/sw/redmine/attachments/25/sin.png!|
-
-2. The following step includes plotting of the approximated function, with the desired number of approximation segments.
-   Each approximation is accompanied by the basic information about the approximation. The approximation of the sinus function with 7
-   approximation segments is shown below, with the corresponding information on the left. 
-
-|!http://kirp.chtf.stuba.sk/sw/redmine/attachments/24/sin_apprx.png!|!http://kirp.chtf.stuba.sk/sw/redmine/attachments/26/sin_apprx_7regions.png!|
-
-3. The final step is represented by an automatic export to the HYSDEL file. 
