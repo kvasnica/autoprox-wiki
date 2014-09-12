@@ -204,7 +204,3 @@ The basic window consists of five sections each serving for different tasks:
 * *Generate PWA approximation* - to render the approximation or to split the the original function, if approximation of an n-dimensional functions has to be realized
 * *Approximation summary* - comprehensive description about the efficiency of the linearization, including several indicators of quality(average error, worst case error ...)
 * *Post-processing* - serving for exporting the acquired data to teh HYSDEL language
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
