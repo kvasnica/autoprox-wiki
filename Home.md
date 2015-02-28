@@ -17,6 +17,10 @@ The `autoprox` package is available in the [Downloads](Downloads) section.
 
 Send your comments, questions, and/or bug reports to `michal.kvasnica(at)stuba.sk`
 
+## Further reading ##
+
+See Chapter 3 of [Alex Szucs' PhD thesis](http://www.kirp.chtf.stuba.sk/publication_info.php?id_pub=1522)
+
 ## Quick start ##
 
 Download the ZIP package, unpack, and run one of the following demos:
