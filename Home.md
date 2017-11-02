@@ -11,7 +11,7 @@
 
 ## Download ##
 
-The `autoprox` package is available in the [Downloads](Downloads) section.
+The `autoprox` package is available in the [Downloads](/kvasnica/autoprox/downloads) section.
 
 ## Bug reports and inquiries ##
 
